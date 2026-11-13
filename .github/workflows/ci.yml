@@ -12,14 +12,18 @@ jobs:
     # the preinstall check additionally fails the install if a placeholder was
     # left behind in a file npm does not read.
     if: ${{ !endsWith(github.repository, '/website-template') }}
-    uses: museumwithnofrontiers/viewer-workflows/.github/workflows/website-ci.yml@v1.13.0
+    uses: museumwithnofrontiers/viewer-workflows/.github/workflows/website-ci.yml@v1.14.0
+    with:
+      # Legacy's pages are English, whatever the book: the site offers English
+      # alone (publicationsConfig), where its package declares the books' languages.
+      languages: en
   locales:
     # Guarded like the rest since the texts gained placeholders of their own:
     # __SITE_NAMESPACE__ is not a name, so the template's own locales/en.json
     # cannot pass the check a real website has to pass. scripts/check-placeholders.js
     # is what refuses a copy that still carries it.
     if: ${{ !endsWith(github.repository, '/website-template') }}
-    uses: museumwithnofrontiers/viewer-workflows/.github/workflows/locale-validate.yml@v1.13.0
+    uses: museumwithnofrontiers/viewer-workflows/.github/workflows/locale-validate.yml@v1.14.0
   # locales merges a green text-only PR with the workflow token, which starts
   # no Deploy; this starts it once the merge lands.
   deploy-texts:
@@ -28,4 +32,4 @@ jobs:
     permissions:
       actions: write
       pull-requests: read
-    uses: museumwithnofrontiers/viewer-workflows/.github/workflows/website-text-deploy.yml@v1.13.0
+    uses: museumwithnofrontiers/viewer-workflows/.github/workflows/website-text-deploy.yml@v1.14.0
