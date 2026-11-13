@@ -15,7 +15,7 @@
     "namespace": "books"
   },
   "dependencies": {
-    "@museumwnf/publications-data": "^1.0.3",
+    "@museumwnf/publications-data": "^1.0.4",
     "@museumwnf/viewer-core": "^2.23.1",
     "@museumwnf/viewer-i18n": "^6.18.0",
     "@museumwnf/viewer-layout": "^3.75.0",
