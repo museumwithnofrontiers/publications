@@ -1,5 +1,6 @@
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
+import { configDefaults } from 'vitest/config'
 import { defineViewerConfig } from '@museumwnf/viewer-core/vite'
 
 // The shape every website's vite.config.js needs — the data-package alias,
@@ -15,4 +16,6 @@ export default defineConfig({
   // BASE_PATH accordingly. Local dev and root deployments use /.
   base: process.env.BASE_PATH ?? '/',
   ...viewerConfig,
+  // The page tests run against their fixture package: vitest.pages.config.js.
+  test: { ...viewerConfig.test, exclude: [...configDefaults.exclude, 'tests/pages/**'] },
 })

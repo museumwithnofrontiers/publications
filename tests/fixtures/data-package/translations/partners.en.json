@@ -1,0 +1,16 @@
+{
+  "p1": {
+    "name": "Zed Museum",
+    "city": "Cairo",
+    "description": "A **fixture** partner museum.",
+    "address": "1 Fixture Street",
+    "phone": "+20 000 0000",
+    "email": "info@p1.example.org",
+    "website": "p1.example.org"
+  },
+  "p7": { "name": "Alpha Museum", "city": "Giza" },
+  "p2": { "name": "Attached Gallery", "city": "Cairo" },
+  "p3": { "name": "Damascus Museum", "city": "Damascus" },
+  "p4": { "name": "Aleppo Annex", "city": "Aleppo" },
+  "p5": { "name": "Homs Collection", "city": "Homs" }
+}

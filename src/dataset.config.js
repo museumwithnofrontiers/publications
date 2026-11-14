@@ -1,10 +1,9 @@
-import { publicationsConfig } from '@museumwnf/viewer-layout/publications'
+import { publicationsConfig } from './routes.js'
 
 // The whole declaration of this website: legacy books.museumwnf.org, whose
-// pages, shell, category menu, search and footer are viewer-layout's
-// (`publicationsConfig`, @museumwnf/viewer-layout/publications). What is
-// this website's own is below: its data package, its address and its chrome
-// files.
+// pages, shell, category menu, search and footer are this repository's own
+// (src/routes.js, src/SiteShell.vue, src/views/). Below: its data package,
+// its address and its chrome files.
 
 // The site's chrome files under theme/assets/: legacy's two logos
 // (`legacy/logo-blue.png` in the header, `legacy/logo-white.png` in the

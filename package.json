@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest run",
+    "test": "vitest run && vitest run --config vitest.pages.config.js",
     "lint": "eslint ."
   },
   "viewerI18n": {
