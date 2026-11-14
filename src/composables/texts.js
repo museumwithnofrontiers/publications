@@ -1,0 +1,81 @@
+import { useI18n } from '@museumwnf/viewer-core'
+
+// The texts this site names in its data rather than in a page: a category's
+// title and menu entry and a format (rules.js), a search field, a footer link
+// or heading (footer.js). Each is spelled out here, so viewer-i18n-check sees
+// every name a page asks for; tests/pages/ checks that none is missing.
+export function useNamedText() {
+  const { t } = useI18n()
+  const texts = {
+    'publications.category.educational': () => t('publications.category.educational'),
+    'publications.category.new': () => t('publications.category.new'),
+    'publications.category.other': () => t('publications.category.other'),
+    'publications.category.travelBooks': () => t('publications.category.travelBooks'),
+    'publications.category.virtualMuseum': () => t('publications.category.virtualMuseum'),
+    'publications.footer.archive': () => t('publications.footer.archive'),
+    'publications.footer.cafeteria': () => t('publications.footer.cafeteria'),
+    'publications.footer.chronology': () => t('publications.footer.chronology'),
+    'publications.footer.commemoration': () => t('publications.footer.commemoration'),
+    'publications.footer.contact': () => t('publications.footer.contact'),
+    'publications.footer.contactLink': () => t('publications.footer.contactLink'),
+    'publications.footer.contactPartners': () => t('publications.footer.contactPartners'),
+    'publications.footer.contactTeam': () => t('publications.footer.contactTeam'),
+    'publications.footer.cookies': () => t('publications.footer.cookies'),
+    'publications.footer.credits': () => t('publications.footer.credits'),
+    'publications.footer.honoraryCommittee': () => t('publications.footer.honoraryCommittee'),
+    'publications.footer.languagePolicy': () => t('publications.footer.languagePolicy'),
+    'publications.footer.leagueOfArabStates': () => t('publications.footer.leagueOfArabStates'),
+    'publications.footer.legalNotice': () => t('publications.footer.legalNotice'),
+    'publications.footer.more': () => t('publications.footer.more'),
+    'publications.footer.others': () => t('publications.footer.others'),
+    'publications.footer.pressLounge': () => t('publications.footer.pressLounge'),
+    'publications.footer.support': () => t('publications.footer.support'),
+    'publications.footer.volunteers': () => t('publications.footer.volunteers'),
+    'publications.format.ebook': () => t('publications.format.ebook'),
+    'publications.format.print': () => t('publications.format.print'),
+    'publications.format.printOnDemand': () => t('publications.format.printOnDemand'),
+    'publications.menu.new': () => t('publications.menu.new'),
+    'publications.search.country': () => t('publications.search.country'),
+    'publications.search.language': () => t('publications.search.language'),
+    'publications.search.publisher': () => t('publications.search.publisher'),
+    'publications.search.subject': () => t('publications.search.subject'),
+    'publications.search.type': () => t('publications.search.type'),
+  }
+  return (name) => (texts[name] ? texts[name]() : name)
+}
+
+export const NAMED_TEXTS = [
+  'publications.category.educational',
+  'publications.category.new',
+  'publications.category.other',
+  'publications.category.travelBooks',
+  'publications.category.virtualMuseum',
+  'publications.footer.archive',
+  'publications.footer.cafeteria',
+  'publications.footer.chronology',
+  'publications.footer.commemoration',
+  'publications.footer.contact',
+  'publications.footer.contactLink',
+  'publications.footer.contactPartners',
+  'publications.footer.contactTeam',
+  'publications.footer.cookies',
+  'publications.footer.credits',
+  'publications.footer.honoraryCommittee',
+  'publications.footer.languagePolicy',
+  'publications.footer.leagueOfArabStates',
+  'publications.footer.legalNotice',
+  'publications.footer.more',
+  'publications.footer.others',
+  'publications.footer.pressLounge',
+  'publications.footer.support',
+  'publications.footer.volunteers',
+  'publications.format.ebook',
+  'publications.format.print',
+  'publications.format.printOnDemand',
+  'publications.menu.new',
+  'publications.search.country',
+  'publications.search.language',
+  'publications.search.publisher',
+  'publications.search.subject',
+  'publications.search.type',
+]
